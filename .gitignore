@@ -1,0 +1,18 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Logs and runtime data
+*.log
+*.tmp
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# datasets or env files
+*.csv
+*.json
+
+# node_modules (if needed)
+node_modules/
