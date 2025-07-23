@@ -1,0 +1,25 @@
+direction right
+title: AWS S3 → QuickSight Netflix Analytics Pipeline
+
+user[icon: user, label: "Data Analyst / Developer"]
+
+s3[icon: aws-s3, label: "S3 Bucket (netflix dataset)"]
+
+
+qs[icon: aws-quicksight, label: "Amazon QuickSight"]
+donut[icon: aws-quicksight, label: "Donut Chart (Count by Year)"]
+bar1[icon: aws-quicksight, label: "Bar Chart (Movies vs TV by Year)"]
+table[icon: aws-quicksight, label: "Table (Title Count by Year)"]
+bar2[icon: aws-quicksight, label: "Bar Chart (Movies vs TV by Year,Single line)"]
+bar3[icon: aws-quicksight, label: "Bar Chart (count of title by date_added )"]
+bar4[icon: aws-quicksight, label: "Bar Chart (count of title by listed in)"]
+
+user -> s3 : "1. Upload data files (.csv + manifest.json)"
+user -> s3 : "2. Store manifest.json for QuickSight"
+s3 -> qs : "3. Import data using manifest"
+qs -> donut : "4. Create donut chart"
+qs -> bar1 : "5. Create bar chart"
+qs -> table : "7. Build table visualization"
+qs -> bar2 : "6. Create bar chart"
+qs -> bar3 : "8. Create bar chart"
+qs -> bar4 : "9. Create bar chart"
