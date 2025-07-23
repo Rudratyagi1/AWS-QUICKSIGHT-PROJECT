@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # AWS Netflix Data Analytics with QuickSight
 
 ![AWS QuickSight](https://img.shields.io/badge/AWS-QuickSight-orange?logo=amazon-aws&logoColor=white)
